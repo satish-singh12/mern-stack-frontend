@@ -31,7 +31,7 @@ This project serves as the frontend for a transaction dashboard application. It 
 1. Clone the repository:
    ```bash
    git clone <repository-url>
-   cd frontend
+   cd mern-stack-frontend
    ```
 2. Install dependencies:
    ```bash
