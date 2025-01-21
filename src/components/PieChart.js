@@ -49,7 +49,7 @@ const PieChart = ({ pieChartData, monthName }) => {
             }}
           />
         ) : (
-          <p>No data available for the selected month.</p>
+          <p className="text-center">No data available.</p>
         )}
       </div>
     </>

@@ -45,8 +45,6 @@ const Dashboard = () => {
           params: { page, perPage, search, month },
         }
       );
-
-      console.log(data);
       setTransactions(data.transactions);
       setTotal(data.total);
     } catch (error) {

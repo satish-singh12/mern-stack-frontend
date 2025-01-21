@@ -26,7 +26,7 @@ const BarChart = ({ barChartData, monthName }) => {
     datasets: [
       {
         label: "Count",
-        data: barChartData?.map((item) => item.count * 100),
+        data: barChartData?.map((item) => item?.count * 100),
         backgroundColor: "rgba(9, 146, 146, 0.6)",
       },
     ],
@@ -50,9 +50,7 @@ const BarChart = ({ barChartData, monthName }) => {
             }}
           />
         ) : (
-          <p className="text-center">
-            No data available for the selected month.
-          </p>
+          <p className="text-center">No data available.</p>
         )}
       </div>
     </>
