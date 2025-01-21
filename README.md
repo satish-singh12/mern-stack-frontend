@@ -30,25 +30,25 @@ This project serves as the frontend for a transaction dashboard application. It 
 
 ### Installation
 1. Clone the repository:
-   \`\`\`bash
+   ```bash
    git clone <repository-url>
    cd frontend
-   \`\`\`
+   ```
 2. Install dependencies:
-   \`\`\`bash
+   ```bash
    npm install
-   \`\`\`
+   ```
 3. Start the development server:
-   \`\`\`bash
+   ```bash
    npm start
-   \`\`\`
+   ```
 4. The application will run at [http://localhost:3000](http://localhost:3000).
 
 ---
 
 ## Folder Structure
 
-\`\`\`
+```
 src/
 ├── components/             # Reusable UI components
 │   ├── BarChart.js         # Bar chart component
@@ -64,7 +64,7 @@ src/
 │   └── api.js              # API call methods
 └── styles/                 # Global and component styles
     └── App.css             # Global styles for the app
-\`\`\`
+```
 
 ---
 
