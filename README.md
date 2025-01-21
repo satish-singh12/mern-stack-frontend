@@ -16,7 +16,6 @@ This project serves as the frontend for a transaction dashboard application. It 
   - [API Integration](#api-integration)
     - [Example API Endpoints](#example-api-endpoints)
     - [API Requests](#api-requests)
-  - [Environment Variables](#environment-variables)
   - [Dependencies](#dependencies)
   - [License](#license)
 
@@ -59,11 +58,8 @@ src/
 ├── pages/                  # Page components
 │   └── Dashboard.js        # Main dashboard page
 ├── App.js                  # Main React component
-├── index.js                # React entry point
-├── services/               # API interaction layer
-│   └── api.js              # API call methods
-└── styles/                 # Global and component styles
-    └── App.css             # Global styles for the app
+└── index.js                # React entry point
+
 ```
 
 ---
@@ -90,17 +86,7 @@ The frontend communicates with the backend to fetch transaction data, statistics
 - **GET** `/api/v1/transaction/pie-chart`: Get pie chart data grouped by category.
 
 ### API Requests
-API requests are made using the `axios` library (or any other HTTP client) and are defined in the `services/api.js` file.
-
----
-
-## Environment Variables
-
-| Variable      | Description                               |
-|---------------|-------------------------------------------|
-| \`REACT_APP_API_URL\`  | Base URL for the backend API (default: \`http://localhost:5000\`). |
-
----
+API requests are made using the `axios` library.
 
 ## Dependencies
 
