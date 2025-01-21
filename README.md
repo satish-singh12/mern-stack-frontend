@@ -1,62 +1,120 @@
+# Frontend for Transaction Dashboard
 
-# Getting Started with Create React App
+This project serves as the frontend for a transaction dashboard application. It allows users to view and interact with transaction data, including viewing detailed information, statistics, and visualizations such as bar charts and pie charts.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+---
 
-## Available Scripts
+## Table of Contents
 
-In the project directory, you can run:
+- [Frontend for Transaction Dashboard](#frontend-for-transaction-dashboard)
+  - [Table of Contents](#table-of-contents)
+  - [Getting Started](#getting-started)
+    - [Prerequisites](#prerequisites)
+    - [Installation](#installation)
+  - [Folder Structure](#folder-structure)
+  - [Features](#features)
+  - [API Integration](#api-integration)
+    - [Example API Endpoints](#example-api-endpoints)
+    - [API Requests](#api-requests)
+  - [Environment Variables](#environment-variables)
+  - [Dependencies](#dependencies)
+  - [License](#license)
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Getting Started
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Prerequisites
+- Node.js (v16 or higher)
+- A working backend server (refer to the backend's README.md file)
 
-### `npm test`
+### Installation
+1. Clone the repository:
+   \`\`\`bash
+   git clone <repository-url>
+   cd frontend
+   \`\`\`
+2. Install dependencies:
+   \`\`\`bash
+   npm install
+   \`\`\`
+3. Start the development server:
+   \`\`\`bash
+   npm start
+   \`\`\`
+4. The application will run at [http://localhost:3000](http://localhost:3000).
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-# Transaction Dashboard
-
-This project is a **Transaction Dashboard** built using React. It includes various components to display and analyze transaction data, such as tables, charts, and statistics. The application interacts with a backend API to fetch, filter, and display data.
-
-## Features
-
-- **Transaction Table**: Displays a list of transactions with details like title, description, price, and more.
-- **Search and Filter**: Filter transactions by search term or month.
-- **Pagination**: Navigate through multiple pages of transactions.
-- **Statistics**: View summary statistics like total sales amount, total sold items, and unsold items.
-- **Charts**: Visualize data with bar and pie charts.
-- **Database Initialization**: Initialize the database with sample data.
-
-## Technologies Used
-
-- **Frontend**: React, TailwindCSS
-- **Charts**: Chart.js, react-chartjs-2
-- **UI Components**: Ant Design
-- **HTTP Requests**: Axios
+---
 
 ## Folder Structure
 
-```bash
-src/ ├── components/ │ ├── BarChart.js │ ├── Pagination.js │ ├── PieChart.js │ ├── Statistics.js │ ├── TransactionTable.js ├── pages/ │ └── Dashboard.js ├── App.js └── index.js
+\`\`\`
+src/
+├── components/             # Reusable UI components
+│   ├── BarChart.js         # Bar chart component
+│   ├── Pagination.js       # Pagination controls
+│   ├── PieChart.js         # Pie chart component
+│   ├── Statistics.js       # Statistics display
+│   ├── TransactionTable.js # Table to display transactions
+├── pages/                  # Page components
+│   └── Dashboard.js        # Main dashboard page
+├── App.js                  # Main React component
+├── index.js                # React entry point
+├── services/               # API interaction layer
+│   └── api.js              # API call methods
+└── styles/                 # Global and component styles
+    └── App.css             # Global styles for the app
+\`\`\`
 
+---
 
-#API Endpoints
-##The application interacts with the following backend API endpoints:
+## Features
 
-**Fetch Transactions**: GET /api/v1/transaction/transactions
-**Initialize Database**: GET /api/v1/transaction/init
-**Fetch Statistics**: GET /api/v1/transaction/statistics
-**Fetch Bar Chart Data**: GET /api/v1/transaction/bar-chart
-**Fetch Pie Chart Data**: GET /api/v1/transaction/pie-chart
+- **Transaction Table**: Display transactions with pagination and filtering options.
+- **Statistics**: Show statistics on total sales, sold, and unsold items for a specific month.
+- **Bar Chart**: Visual representation of transactions grouped by price ranges.
+- **Pie Chart**: Visual representation of transactions grouped by category.
+- **Pagination**: Navigate through multiple pages of transactions.
+- **Search**: Search transactions by title, description, or price.
 
+---
+
+## API Integration
+
+The frontend communicates with the backend to fetch transaction data, statistics, and visualizations. The base API URL is set to the backend server address, typically [http://localhost:5000](http://localhost:5000).
+
+### Example API Endpoints
+- **GET** `/api/v1/transaction/transactions`: Get a paginated list of transactions.
+- **GET** `/api/v1/transaction/statistics`: Get statistics for a specific month.
+- **GET** `/api/v1/transaction/bar-chart`: Get bar chart data grouped by price range.
+- **GET** `/api/v1/transaction/pie-chart`: Get pie chart data grouped by category.
+
+### API Requests
+API requests are made using the `axios` library (or any other HTTP client) and are defined in the `services/api.js` file.
+
+---
+
+## Environment Variables
+
+| Variable      | Description                               |
+|---------------|-------------------------------------------|
+| \`REACT_APP_API_URL\`  | Base URL for the backend API (default: \`http://localhost:5000\`). |
+
+---
+
+## Dependencies
+
+| Package          | Version  | Description                              |
+|------------------|----------|------------------------------------------|
+| \`axios\`         | ^1.7.9   | For making HTTP requests to the backend. |
+| \`react\`         | ^18.x.x  | Core React library.                      |
+| \`react-dom\`     | ^18.x.x  | DOM bindings for React.                  |
+| \`react-router-dom\` | ^6.x.x | For handling routing in React.          |
+| \`chart.js\`      | ^4.0.1   | For rendering bar charts and pie charts. |
+| \`react-chartjs-2\` | ^4.1.1  | For integrating Chart.js with React.     |
+
+---
+
+## License
+
+This project is licensed under the ISC License.
