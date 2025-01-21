@@ -7,13 +7,13 @@ const TransactionTable = ({ transactions }) => {
         <table className="min-w-full border-collapse mb-5 bg-orange-300">
           <thead>
             <tr className="bg-gray-200">
-              <th className="border px-4 py-2 text-left">ID</th>
-              <th className="border px-4 py-2 text-left">Title</th>
-              <th className="border px-4 py-2 text-left">Description</th>
-              <th className="border px-4 py-2 text-left">Price</th>
-              <th className="border px-4 py-2 text-left">Category</th>
-              <th className="border px-4 py-2 text-left">Sold</th>
-              <th className="border px-4 py-2 text-left">Image</th>
+              <th className="border px-4 py-2 text-center">ID</th>
+              <th className="border px-4 py-2 text-center">Title</th>
+              <th className="border px-4 py-2 text-center">Description</th>
+              <th className="border px-4 py-2 text-center">Price</th>
+              <th className="border px-4 py-2 text-center">Category</th>
+              <th className="border px-4 py-2 text-center">Sold</th>
+              <th className="border px-4 py-2 text-center">Image</th>
             </tr>
           </thead>
           <tbody>
